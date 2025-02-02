@@ -67,7 +67,7 @@ export const TypewriterEffect = ({
   return (
     <div
       className={cn(
-        "text-base sm:text-xl md:text-3xl lg:text-5xl font-bold text-left w-full", // Set text-left and full width
+        "text-base sm:text-xl md:text-3xl lg:text-5xl font-bold text-left w-screen", // Set text-left and full width
         className
       )}
     >
