@@ -12,7 +12,7 @@ const Experience = () => {
         "At Spot, I developed a service integrating a third-party API (Sustain Log) to track CO2 emissions, leveraging React, .NET, C#, and SQL. I implemented Redis caching, Hangfire for background tasks, Azure DevOps for CI/CD, and followed CQRS principles to optimize deployment speed and API performance.",
     },
     {
-      company: "Purdue Center for Career Opportunities",
+      company: "Purdue CCO",
       title: "Full Stack Engineer",
       icon: "/ccologo.png",
       link: "https://www.cco.purdue.edu/",

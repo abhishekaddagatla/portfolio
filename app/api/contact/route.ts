@@ -14,6 +14,8 @@ export async function POST(req: Request) {
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
     });
 
+    console.log("Email Response:", response);
+
     return NextResponse.json({ success: true, message: "Email sent!" });
   } catch (error) {
     console.error(error);

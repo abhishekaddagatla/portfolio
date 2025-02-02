@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 
 export const HoverEffect = ({
   items,
@@ -18,7 +19,7 @@ export const HoverEffect = ({
   }[];
   className?: string;
 }) => {
-  let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <div
@@ -62,10 +63,12 @@ export const HoverEffect = ({
             <Card>
               {/* Image Container with Consistent Sizing */}
               <div className="w-full h-24 bg-gray-300 shadow-inner shadow-gray-500 flex items-center justify-center rounded-lg p-3">
-                <img
+                <Image
                   src={item.icon}
                   alt="company logo"
-                  className="max-w-full max-h-full object-contain"
+                  height={150}
+                  width={150}
+                  className="object-contain"
                 />
               </div>
 
@@ -110,7 +113,7 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h3 className={cn("text-zinc-100 font-bold tracking-wide mt-2", className)}>
+    <h3 className={cn("text-zinc-100 font-bold tracking-wide mt-4", className)}>
       {children}
     </h3>
   );

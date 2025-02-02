@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 
 export const HoverEffect = ({
   items,
@@ -17,7 +18,7 @@ export const HoverEffect = ({
   }[];
   className?: string;
 }) => {
-  let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <div className={cn("grid grid-cols-1 py-6", className)}>
@@ -59,10 +60,12 @@ export const HoverEffect = ({
               <div className="flex flex-row items-center">
                 {/* Image Container with Fixed Size */}
                 <div className="w-2/5 h-32 flex items-center justify-center rounded-lg p-3 overflow-hidden flex-shrink-0">
-                  <img
+                  <Image
                     src={item.image}
                     alt="project preview"
-                    className="w-full h-full object-contain"
+                    height={400}
+                    width={400}
+                    className="object-cover"
                   />
                 </div>
 

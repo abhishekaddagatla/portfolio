@@ -1,6 +1,5 @@
 import React from "react";
 import Music from "@/components/Music";
-import MyFooter from "@/components/MyFooter";
 
 const MusicPage = () => {
   return (

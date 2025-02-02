@@ -8,11 +8,11 @@ import {
   Modal,
   ModalBody,
   ModalContent,
-  ModalFooter,
   ModalTrigger,
 } from "./ui/animated-modal";
 import { useState } from "react";
 import MyFooter from "./MyFooter";
+import Image from "next/image";
 
 const ContactModal = () => {
   const [formData, setFormData] = useState({
@@ -62,6 +62,7 @@ const ContactModal = () => {
       }
     } catch (error) {
       setStatus("❌ Network error. Please check your connection.");
+      console.log("error", error);
     } finally {
       setLoading(false);
     }
@@ -163,10 +164,12 @@ const Hero = () => {
       <AuroraBackground>
         <div className="flex justify-evenly">
           <div className="flex flex-col justify-center">
-            <img
+            <Image
               src="/abhigrad2.jpeg"
               alt="Abhi"
-              className="h-3/4 w-auto rounded-lg"
+              width={300}
+              height={400}
+              className="rounded-lg object-cover"
             />
           </div>
           <div className="relative flex flex-col gap-4 justify-center px-4">
