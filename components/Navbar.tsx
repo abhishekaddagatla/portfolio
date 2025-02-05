@@ -15,6 +15,7 @@ const Navbar = ({ className }: { className?: string }) => {
         <HoveredLink href="/">home</HoveredLink>
         <HoveredLink href="/work">work</HoveredLink>
         <HoveredLink href="/skills">skills</HoveredLink>
+        <HoveredLink href="/resume">resume</HoveredLink>
         <HoveredLink href="/music">music</HoveredLink>
       </Menu>
     </div>
